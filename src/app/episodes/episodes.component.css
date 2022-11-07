@@ -1,0 +1,24 @@
+.button{
+  display: flex;
+  justify-content: center;
+}
+#blueHeader{
+  background-color: blue;
+  color: snow;
+  margin: 0px;
+  height: 50px;
+  padding: 10px;
+  font-family: Cochin;
+}
+
+#grayHeader{
+  background-color: lightgray;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  font-family: Cochin;
+}
+
+.episode{
+  width: 30%;
+}

@@ -8,24 +8,32 @@ import {EpisodService} from "../services/episod.service";
   styleUrls: ['./episodes.component.css']
 })
 export class EpisodesComponent implements OnInit {
-
-
+  pageSeparator:boolean = true;
+  responce:any;
   episodes:EpisodInterfaces[];
   constructor(private episodServices: EpisodService) { }
 
-  ngOnInit(): void {
-    this.episodServices.getAll().subscribe(value => this.episodes=value)
+    ngOnInit(): void {
+    this.episodServices.getAll()
+      .subscribe(
+        (response:any)=>{
+          this.episodes = response.results;
+        });
+  }
+
+  pagesSeparatorNext(){
+    this.pageSeparator = false
+  }
+  pagesSeparatorPrew(){
+    this.pageSeparator = true
   }
 
 
-  // ngOnInit():void {
-  //   this.episodServices.getAll().subscribe(value => {
-  //     // @ts-ignore
-  //     this.episodes.map((item)=>{
-  //       return item
-  //     })
-  //   })
-  // }
+
+
+
+
+
 
 
 
