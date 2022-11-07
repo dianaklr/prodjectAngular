@@ -8,7 +8,7 @@ import {EpisodService} from "../services/episod.service";
   styleUrls: ['./episodes.component.css']
 })
 export class EpisodesComponent implements OnInit {
-  pageSeparator:boolean = true;
+  pageSeparator:boolean;
   responce:any;
   episodes:EpisodInterfaces[];
   constructor(private episodServices: EpisodService) { }
