@@ -3,22 +3,24 @@
 
 <div *ngIf="pageSeparator" class="episodes">
   <div *ngFor ="let episode of episodes" >
-      <div *ngIf="episode.id <= 10 " class="episode">
+      <div *ngIf="episode.id >= 10 ">
         <div class="episode">
-          {{episode.name}} ----
-          {{episode.air_date}}---
-          {{episode.episode}}
+          <h3>{{episode.name}}</h3>
+         <p>Air date: {{episode.air_date}}</p>
+          <p>Episode: {{episode.episode}}</p>
+          <p> <a href=""> Episode details</a></p>
         </div>
       </div>
   </div>
 </div>
 <div *ngIf="!pageSeparator" class="episodes">
   <div *ngFor ="let episode of episodes">
-    <div *ngIf="episode.id > 10 " >
+    <div *ngIf="episode.id < 10 ">
       <div class="episode">
-      {{episode.name}} ----
-      {{episode.air_date}}---
-      {{episode.episode}}
+     <h3>{{episode.name}} </h3>
+        <p>Air date: {{episode.air_date}}</p>
+        <p>Episode: {{episode.episode}}</p>
+        <p> <a href=""> Episode details</a></p>
       </div>
     </div>
   </div>
