@@ -23,18 +23,9 @@ export class EpisodesComponent implements OnInit {
 
   pagesSeparatorNext(){
     this.pageSeparator = true
+
   }
   pagesSeparatorPrew(){
     this.pageSeparator = false
   }
-
-
-
-
-
-
-
-
-
-
 }
