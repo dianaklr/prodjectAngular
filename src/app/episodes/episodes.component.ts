@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { urls } from '../configs';
 import {EpisodInterfaces} from "../interfaces";
 import {EpisodService} from "../services/episod.service";
 
@@ -11,6 +12,7 @@ export class EpisodesComponent implements OnInit {
   pageSeparator:boolean;
   responce:any;
   episodes:EpisodInterfaces[];
+
   constructor(private episodServices: EpisodService) { }
 
     ngOnInit(): void {
@@ -28,4 +30,6 @@ export class EpisodesComponent implements OnInit {
   pagesSeparatorPrew(){
     this.pageSeparator = false
   }
+
+
 }

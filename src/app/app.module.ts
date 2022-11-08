@@ -14,7 +14,8 @@ import { CharactersComponent } from './characters/characters.component';
 
 const appRoutes:Routes = [
   {path: '', component: EpisodesComponent},
-  {path: 'characters', component: CharactersComponent}
+  {path: 'characters', component: CharactersComponent},
+  {path: 'location', component: CharactersComponent}
 ]
 
 @NgModule({
