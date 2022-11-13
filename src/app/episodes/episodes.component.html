@@ -1,35 +1,25 @@
 <div id="blueHeader"><p>Rick and Morty</p></div>
 <div id="grayHeader"><h1>Rick and Morty episodes!</h1></div>
 
-<div *ngIf="pageSeparator" class="episodes">
-  <div *ngFor ="let episode of episodes" >
-      <div *ngIf="episode.id >= 10 ">
+<div class="episodes">
+  <div *ngFor ="let episode of episodes">
+
         <div class="episode">
           <h3>{{episode.name}}</h3>
          <p>Air date: {{episode.air_date}}</p>
           <p>Episode: {{episode.episode}}</p>
-          <p> <a routerLink="/characters"> Episode details</a></p>
 
+          <p> <a routerLink="/characters/{{episode.id}}"> Episode details </a></p>
         </div>
-      </div>
-  </div>
-</div>
-<div *ngIf="!pageSeparator" class="episodes">
-  <div *ngFor ="let episode of episodes">
-    <div *ngIf="episode.id < 10 ">
-      <div class="episode">
-     <h3>{{episode.name}} </h3>
-        <p>Air date: {{episode.air_date}}</p>
-        <p>Episode: {{episode.episode}}</p>
-        <p> <a routerLink="/characters"> Episode details</a></p>
-      </div>
-    </div>
   </div>
 </div>
 
 
-<hr>
-<div class="button">
-<button (click)="pagesSeparatorPrew()">prew </button>
-<button (click)="pagesSeparatorNext()">next</button>
-</div>
+<mat-paginator
+               [pageSize]="2"
+               aria-label="Select page">
+</mat-paginator>
+
+
+
+

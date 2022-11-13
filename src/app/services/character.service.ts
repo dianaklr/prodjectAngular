@@ -10,18 +10,18 @@ import {urls} from "../configs";
 @Injectable({
   providedIn: 'root'
 })
-// @ts-ignore
 export class CharacterService{
 
   constructor(private httpClient :HttpClient) {
 
   }
-  getAll():Observable<CharacterInterfaces[]>{
-    return this.httpClient.get<CharacterInterfaces[]>(urls.characters)
+  getAll(id= 1):Observable<CharacterInterfaces[]>{
+    // return this.httpClient.get<CharacterInterfaces[]>(urls.characters)
+    // @ts-ignore
+    return this.httpClient.get<CharacterInterfaces[]>(`${urls.characters}/?${id}`)
+
   }
   getById(id:number):Observable<CharacterInterfaces>{
-    return this.httpClient.get<CharacterInterfaces>(`${urls.episodes}/${id}`)
+    return this.httpClient.get<CharacterInterfaces>(`${urls.characters}/${id}`)
   }
-
-
 }

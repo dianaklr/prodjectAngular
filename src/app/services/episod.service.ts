@@ -11,6 +11,7 @@ import {urls} from "../configs";
 })
 export class EpisodService {
 
+
   constructor(private httpClient :HttpClient) {
 
   }

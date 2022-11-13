@@ -1,9 +1,9 @@
 const baseURL = 'https://rickandmortyapi.com/api'
 
 
-const urls = {
+let urls = {
   characters:`${baseURL}/character`,
-  episodes:`${baseURL}/episode`
+  episodes:`${baseURL}/episode`,
 }
 
 export {

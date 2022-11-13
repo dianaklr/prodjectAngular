@@ -8,19 +8,24 @@ import { CharacterService } from '../services';
   templateUrl: './characters.component.html',
   styleUrls: ['./characters.component.css']
 })
+
+
 export class CharactersComponent implements OnInit {
 
   responce:any;
   characters:CharacterInterfaces[];
-  episodServices: any;
+  idCharacters: any = 1;
 
-  constructor(private characterServices: CharacterService) { }
+  constructor(private characterServices: CharacterService) {
+    console.log(this.characterServices)
+  }
 
   ngOnInit(): void {
     this.characterServices.getAll()
       .subscribe(
         (response:any)=>{
-          this.characters = response.results;
+          this.characters = response.results ;
+          this.idCharacters = response.id;
         });
   }
 

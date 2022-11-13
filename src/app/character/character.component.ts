@@ -1,4 +1,4 @@
-import { Component, Input, OnInit,  } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-character',
@@ -13,9 +13,6 @@ export class CharacterComponent implements OnInit {
 
   ngOnInit(): void {
   }
+}
 
-}
-function Intup() {
-    throw new Error('Function not implemented.');
-}
 
