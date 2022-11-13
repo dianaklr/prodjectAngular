@@ -18,7 +18,7 @@ export class CharacterService{
   getAll(id= 1):Observable<CharacterInterfaces[]>{
     // return this.httpClient.get<CharacterInterfaces[]>(urls.characters)
     // @ts-ignore
-    return this.httpClient.get<CharacterInterfaces[]>(`${urls.characters}/?${id}`)
+    return this.httpClient.get<CharacterInterfaces[]>(`${urls.characters}`)
 
   }
   getById(id:number):Observable<CharacterInterfaces>{
